@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mustafa Ercengiz - About</title>
+  <!-- Google Font for elegant header typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+    }
+    nav a:hover { color: #ccc; }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    article {
+      margin-bottom: 40px;
+      font-size: 1.2em;
+      text-align: justify;
+    }
+    article h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      text-align: center;
+    }
+    /* Profile Photo Styling */
+    article .profile-photo {
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* maintains a circular shape */
+      object-fit: cover;
+      filter: grayscale(100%); /* makes the image black and white */
+      margin: 20px auto; /* centers the image with spacing */
+      border: none; /* removes any border, ensuring it's edgeless */
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { font-size: 1em; }
+      main { margin: 20px auto; padding: 0 10px; }
+      article { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mustafa Ercengiz</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>About Me</h2>
+      <!-- Profile photo added at the top of the About Me section -->
+      <img src="mstf.png" alt="Mustafa Ercengiz" class="profile-photo" />
+      <p>
+        Hi, I'm Mustafa Ercengiz. I’m someone who loves breaking down complex problems and figuring out how to make things work better—whether it's optimizing a system, improving a strategy, or training a model to make smarter predictions. My journey started in management engineering, but along the way, I got hooked by technological developments, mostly data science, machine learning, and AI-driven decision-making.
+      </p>
+      <p>
+        Through design and development, I strive to blend form and function in everything I do.
+      </p>
+    </article>
+  </main>
+</body>
+</html>

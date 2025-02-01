@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Mustafa Ercengiz</title>
+  <!-- Google Font for header styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+    }
+    nav a:hover { color: #ccc; }
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .projects-container {
+      /* Single-column grid for vertical layout */
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .project-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card h3 { font-size: 1.5em; margin-bottom: 10px; }
+    .project-card p { margin-bottom: 15px; font-size: 1.1em; text-align: justify; }
+    .project-card a {
+      text-decoration: none;
+      color: #007acc;
+      font-size: 1em;
+      margin-right: 10px;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { font-size: 1em; }
+      main { margin: 20px auto; padding: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Projects</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+  <main>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>Cookie Cats Mobile Game ABtesting + User Segmentation</h3>
+        <p>
+          An A/B testing project that explores different strategies for optimizing the user experience.
+        </p>
+        <a href="project1.html">View Details</a>
+        <a href="https://github.com/MUSERC/Cookie-Cats-ABtesting" target="_blank">View on GitHub</a>
+      </div>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>Helmet Detection Model and Object Detection Algorithms Comparison</h3>
+        <p>
+          A term project that delves into object detection algorithms in terms of computational speed and efficiency. Resulting with practiallt working YoloV8 model demonstrates the Faster-RCNN model.   
+        </p>
+        <a href="project2.html">View Details</a>
+        <a href="https://github.com/MUSERC/ISL467-TermProject" target="_blank">View on GitHub</a>
+      </div>
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>Predictive ML model combined with LLMs on Plants health</h3>
+        <p>
+          A hackathon project developed with creativity and rapid prototyping, combining with LLM API's and Convolutional Neural Networks to analyze agricultural cases.
+        </p>
+        <a href="project3.html">View Details</a>
+        <a href="https://github.com/emyrkrkmz/izq_hackathon" target="_blank">View on GitHub</a>
+      </div>
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h3>Unilever FoodHackers 2025 Optimization Problem </h3>
+        <p>
+          An creative business plans combined with mathematical linear and goal programming optimization models using pulp.
+        </p>
+        <a href="project4.html">View Details</a>
+        <a href="https://github.com/MUSERC/UnileverFoodHackers2025" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

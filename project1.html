@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie-Cats-ABtesting+UserSegmentation - Project Details</title>
+  <!-- Google Font for header styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+    }
+    nav a:hover { text-decoration: underline; }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 { font-size: 2em; margin-bottom: 20px; text-align: center; }
+    p { font-size: 1.2em; margin-bottom: 20px; text-align: justify; }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    /* Style for README container */
+    #readme-container {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 4px;
+      background: #f9f9f9;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { font-size: 1em; }
+      main { margin: 20px auto; padding: 0 10px; }
+      p { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cookie-Cats-ABtesting</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Project Details</h2>
+    <p>
+      This project focuses on the AB testing of feature of Mobile game called Cookie-Cats, more I see the data I saw that, based on to sum of levels played by the player the retention percentages can be predicted and the new business strategies might be started through it.    
+    </p>
+    <p>
+        Statistical Analysis and Data Visualization: 
+    </p>
+    <div id="readme-container">Loading README...</div>
+    <a class="back-link" href="projects.html">&larr; Back to Projects</a>
+  </main>
+  <script>
+    function fetchReadme(owner, repo, elementId) {
+      const url = `https://api.github.com/repos/${owner}/${repo}/readme`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const content = atob(data.content);
+          const repoBaseUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/`; // Adjust "main" if needed
+
+          // Convert Markdown image paths to absolute URLs
+          const htmlContent = content
+            .replace(/!\[.*?\]\((.*?)\)/g, (match, imgPath) => {
+              const absoluteUrl = imgPath.startsWith('http') ? imgPath : repoBaseUrl + imgPath;
+              return `<img src="${absoluteUrl}" style="max-width:100%; height:auto;" />`;
+            });
+
+          document.getElementById(elementId).innerHTML = htmlContent;
+        })
+        .catch(error => {
+          console.error(error);
+          document.getElementById(elementId).innerText = "Failed to load README.";
+        });
+    }
+
+    fetchReadme('MUSERC', 'Cookie-Cats-ABtesting', 'readme-container');
+  </script>
+</body>
+</html>

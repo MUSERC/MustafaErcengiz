@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unilever FoodHackers 2025 Optimization Problem - Project Details</title>
+  <!-- Google Font for header styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+    }
+    nav a:hover { text-decoration: underline; }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 { font-size: 2em; margin-bottom: 20px; text-align: center; }
+    p { font-size: 1.2em; margin-bottom: 20px; text-align: justify; }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    /* Style for README container */
+    #readme-container {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 4px;
+      background: #f9f9f9;
+      white-space: normal; /* Ensure HTML content is rendered correctly */
+      font-family: Arial, sans-serif;
+    }
+    /* New CSS rule to control image sizes within the README container */
+    #readme-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { font-size: 1em; }
+      main { margin: 20px auto; padding: 0 10px; }
+      p { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>UnileverFoodHackers2025</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Project Details</h2>
+    <p>
+       An creative business plans combined with mathematical linear and goal programming optimization models using pulp.
+    </p>
+    <div id="readme-container">Loading README...</div>
+    <a class="back-link" href="projects.html">&larr; Back to Projects</a>
+  </main>
+
+  <!-- Include the Marked library for Markdown-to-HTML conversion -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Fetch and display the README for UnileverFoodHackers2025,
+    // converting Markdown to HTML so that images are rendered.
+    function fetchReadme(owner, repo, elementId) {
+      const url = `https://api.github.com/repos/${owner}/${repo}/readme`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          // Decode base64 content from GitHub API
+          const content = atob(data.content);
+          // Convert Markdown to HTML using Marked
+          const htmlContent = marked.parse(content);
+          document.getElementById(elementId).innerHTML = htmlContent;
+        })
+        .catch(error => {
+          console.error(error);
+          document.getElementById(elementId).innerText = "Failed to load README.";
+        });
+    }
+    
+    // Call the function with your repository details
+    fetchReadme('MUSERC', 'UnileverFoodHackers2025', 'readme-container');
+  </script>
+</body>
+</html>
