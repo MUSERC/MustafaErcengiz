@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engine Health Machine Learning - Project Details</title>
+  <!-- Google Font for header styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+    }
+    nav a:hover { text-decoration: underline; }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 { font-size: 2em; margin-bottom: 20px; text-align: center; }
+    h3 { font-size: 1.5em; margin: 30px 0 15px 0; }
+    p { font-size: 1.2em; margin-bottom: 20px; text-align: justify; }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { font-size: 1em; }
+      main { margin: 20px auto; padding: 0 10px; }
+      p { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Engine Health Machine Learning</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Project Details</h2>
+    <p>
+      This project explores engine sensor data through comprehensive exploratory data analysis (EDA) and deploys diverse machine learning models—from logistic regression to neural networks—to accurately predict engine condition. The goal is to develop a predictive maintenance system that can identify potential engine failures before they occur.
+    </p>
+    
+    <h3>Project Overview</h3>
+    <p>
+      The dataset contains various engine sensor readings including RPM, lubricant oil pressure, fuel pressure, coolant pressure, lubricant oil temperature, and coolant temperature. The target variable is "Engine Condition" which is binary (1 for working, 0 for not working/dead).
+    </p>
+    
+    <h3>Technical Implementation</h3>
+    <p>
+      The project was implemented using Python with libraries including pandas, scikit-learn, XGBoost, seaborn, and matplotlib. Data preprocessing included scaling features and handling outliers to improve model performance.
+    </p>
+
+    <h3>Full Jupyter Notebook</h3>
+    <p>
+      Below, you can explore the full Jupyter Notebook directly within the page. If the embed does not load, you can also view it on GitHub.
+    </p>
+
+    <!-- 🔥 Jupyter Notebook Embed with nbviewer -->
+    <iframe src="https://nbviewer.org/github/MUSERC/EngineHealthMachineLearning/blob/main/automotive-engine-health-multiple-models.ipynb"
+            width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 5px;"></iframe>
+
+    <br><br>
+
+    <!-- 🔗 GitHub Link for Direct Access -->
+    <a href="https://github.com/MUSERC/EngineHealthMachineLearning/blob/main/automotive-engine-health-multiple-models.ipynb"
+       target="_blank" style="color: #007acc; text-decoration: none; font-size: 1.1em; font-weight: bold;">
+      View Full Notebook on GitHub
+    </a>
+
+    <br><br>
+
+    <!-- Back Link -->
+    <a class="back-link" href="projects.html">&larr; Back to Projects</a>
+  </main>
+</body>
+</html>
