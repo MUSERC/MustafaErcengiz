@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Game Churn Prediction - Project Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+    }
+    nav a:hover { text-decoration: underline; }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 { font-size: 2em; margin-bottom: 20px; text-align: center; }
+    h3 { font-size: 1.5em; margin: 30px 0 15px 0; }
+    p { font-size: 1.2em; margin-bottom: 20px; text-align: justify; }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      color: #fff;
+      background-color: #007acc;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background-color: #005f99;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { font-size: 1em; }
+      main { margin: 20px auto; padding: 0 10px; }
+      p { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mobile Game Churn Prediction</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Project Details</h2>
+    <p>
+      This project focuses on predicting user churn in the mobile gaming industry using behavioral and engagement data collected within the first week. By training machine learning models to predict churn, developers can proactively implement retention strategies and improve monetization.
+    </p>
+
+    <h3>Project Overview</h3>
+    <p>
+      Based on a real-world dataset from a mobile puzzle game, this project includes extensive feature engineering, model comparison (Logistic Regression, Random Forest, XGBoost, and more), and a final model deployment. 
+    </p>
+
+    <h3>Download Report</h3>
+    <a href="MobileGameChurn.pdf" download class="button">📄 Download Full Paper (PDF)</a>
+
+    <h3>Full Jupyter Notebook</h3>
+    <p>
+      The full modeling workflow, including preprocessing, feature engineering, cross-validation, and model evaluation is available below.
+    </p>
+
+    <!-- 🔥 Embed notebook from GitHub using nbviewer -->
+    <iframe src="https://nbviewer.org/github/MUSERC/Mobile-Game-Churn-/blob/main/ODEV_YUKLEMEK_final_final_finaş.ipynb"
+            width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 5px;"></iframe>
+
+    <br><br>
+
+    <!-- GitHub Link -->
+    <a href="https://github.com/MUSERC/Mobile-Game-Churn-/blob/main/ODEV_YUKLEMEK_final_final_finaş.ipynb"
+       target="_blank" class="button">🔗 View Notebook on GitHub</a>
+
+    <br><br>
+
+    <!-- Back to Projects -->
+    <a class="back-link" href="projects.html">&larr; Back to Projects</a>
+  </main>
+</body>
+</html>
