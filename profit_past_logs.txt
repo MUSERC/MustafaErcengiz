@@ -1,0 +1,896 @@
+4.2s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+4.2s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+4.2s 3 0.00s - to python to disable frozen modules.
+4.2s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+5.2s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+5.2s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+5.2s 7 0.00s - to python to disable frozen modules.
+5.2s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+15.3s 9 2025-06-21 20:17:01.737835: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+15.3s 10 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+15.3s 11 E0000 00:00:1750537022.000014      13 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+15.3s 12 E0000 00:00:1750537022.075762      13 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+15.5s 13 2025-06-21 20:17:01.737835: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+15.5s 14 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+15.5s 15 E0000 00:00:1750537022.000014      13 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+15.5s 16 E0000 00:00:1750537022.075762      13 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+29.4s 17 ### Section 1: Libraries Loaded ###
+29.4s 18 ### Section 2:  Completed ###
+29.5s 19 ### Section 5: ML feature functions ready ###
+29.5s 20 ### Section 6: MLModelTrainer class ready ###
+29.5s 21 ### Section 7: QAgent class ready ###
+29.6s 22 ### Section 8: RL environment functions ready ###
+29.6s 23 ### Section 10: Evaluator class ready ###
+29.7s 24 ### Section 11: Animation function ready ###
+29.7s 25 ### Section 12: Main pipeline function ready ###
+30.1s 26 ### Successfully loaded price data from /kaggle/input/rl-model-on-stocks/1-min.csv ###
+30.1s 27 
+30.1s 28 ==================== Processing: NVDA (NVDA.O) ====================
+30.1s 29 ### Loaded /kaggle/input/rl-model-on-stocks/NVDA_news.csv ###
+30.1s 30 ### Section 2: News Data Processed for NVDA ###  rows: 1000
+30.1s 31 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+30.4s 32 ### Section 4: Price + Sentiment merged for NVDA.O ###  rows: 77082
+30.4s 33 ### Successfully processed NVDA ###
+30.4s 34 
+30.4s 35 ==================== Processing: TSLA (TSLA.O) ====================
+30.4s 36 ### Loaded /kaggle/input/rl-model-on-stocks/TSLA_news.csv ###
+30.4s 37 ### Section 2: News Data Processed for TSLA ###  rows: 587
+30.4s 38 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+30.4s 39 ### Section 4: Price + Sentiment merged for TSLA.O ###  rows: 77082
+30.4s 40 ### Successfully processed TSLA ###
+30.4s 41 
+30.4s 42 ==================== Processing: MSFT (MSFT.O) ====================
+30.4s 43 ### Loaded /kaggle/input/rl-model-on-stocks/MSFT_news.csv ###
+30.4s 44 ### Section 2: News Data Processed for MSFT ###  rows: 778
+30.6s 45 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+30.6s 46 ### Section 4: Price + Sentiment merged for MSFT.O ###  rows: 77082
+30.6s 47 ### Successfully processed MSFT ###
+30.6s 48 
+30.6s 49 ==================== Processing: GOOGL (GOOGL.O) ====================
+30.6s 50 ### Loaded /kaggle/input/rl-model-on-stocks/GOOGL_news.csv ###
+30.6s 51 ### Section 2: News Data Processed for GOOGL ###  rows: 879
+30.6s 52 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+30.8s 53 ### Section 4: Price + Sentiment merged for GOOGL.O ###  rows: 77082
+30.8s 54 ### Successfully processed GOOGL ###
+30.8s 55 
+30.8s 56 ==================== Processing: AAPL (AAPL.O) ====================
+30.8s 57 ### Loaded /kaggle/input/rl-model-on-stocks/AAPL_news.csv ###
+30.8s 58 ### Section 2: News Data Processed for AAPL ###  rows: 706
+30.8s 59 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+30.9s 60 ### Section 4: Price + Sentiment merged for AAPL.O ###  rows: 77082
+30.9s 61 ### Successfully processed AAPL ###
+30.9s 62 
+30.9s 63 ==================== Processing: META (META.O) ====================
+30.9s 64 ### Loaded /kaggle/input/rl-model-on-stocks/META_news.csv ###
+30.9s 65 ### Section 2: News Data Processed for META ###  rows: 502
+30.9s 66 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+30.9s 67 ### Section 4: Price + Sentiment merged for META.O ###  rows: 77082
+30.9s 68 ### Successfully processed META ###
+31.3s 69 ### Successfully loaded price data from /kaggle/input/rl-model-on-stocks/1-min.csv ###
+31.3s 70 \n\n========================= Starting Monte Carlo Simulation for NVDA =========================
+31.3s 71 Running 30 simulations...
+31.3s 72 \n--- NVDA | Simulation Run 1/30 ---
+31.3s 73 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+31.3s 74 Sliding windows: 7
+31.3s 75 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+37.1s 76 2025-06-21 20:17:24.483032: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+37.5s 77 2025-06-21 20:17:24.483032: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+134.6s 78 ↳ Best ML model: XGB  RMSE=0.0960
+166.2s 79 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+228.5s 80 ↳ Best ML model: XGB  RMSE=0.0995
+270.0s 81 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+371.5s 82 ↳ Best ML model: RF  RMSE=0.1673
+411.2s 83 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+486.8s 84 ↳ Best ML model: XGB  RMSE=0.0857
+530.1s 85 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+612.5s 86 ↳ Best ML model: Linear  RMSE=0.2890
+643.7s 87 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+771.4s 88 ↳ Best ML model: Linear  RMSE=0.3779
+811.9s 89 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+884.0s 90 ↳ Best ML model: RF  RMSE=0.2043
+923.8s 91 Training finished – Q-table states: 915
+924.0s 92 Back-test: final $11,263.66 | strategy 12.64% | buy-&-hold  5.90% | trades 438
+924.0s 93 \n--- NVDA | Simulation Run 2/30 ---
+924.0s 94 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+924.0s 95 Sliding windows: 7
+924.0s 96 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+988.9s 97 ↳ Best ML model: XGB  RMSE=0.0960
+1021.8s 98 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+1088.7s 99 ↳ Best ML model: XGB  RMSE=0.0995
+1126.4s 100 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+1267.8s 101 ↳ Best ML model: RF  RMSE=0.1673
+1307.8s 102 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+1420.9s 103 ↳ Best ML model: XGB  RMSE=0.0857
+1463.5s 104 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+1563.9s 105 ↳ Best ML model: Linear  RMSE=0.2890
+1596.7s 106 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+1658.8s 107 ↳ Best ML model: Linear  RMSE=0.3779
+1698.1s 108 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+1755.8s 109 ↳ Best ML model: RF  RMSE=0.2043
+1798.1s 110 Training finished – Q-table states: 908
+1798.5s 111 Back-test: final $10,190.00 | strategy  1.90% | buy-&-hold  5.90% | trades 461
+1798.5s 112 \n--- NVDA | Simulation Run 3/30 ---
+1798.5s 113 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+1798.5s 114 Sliding windows: 7
+1798.5s 115 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+1875.0s 116 ↳ Best ML model: XGB  RMSE=0.0960
+1901.8s 117 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+1988.8s 118 ↳ Best ML model: XGB  RMSE=0.0995
+2030.9s 119 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+2177.5s 120 ↳ Best ML model: RF  RMSE=0.1673
+2219.5s 121 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+2313.4s 122 ↳ Best ML model: XGB  RMSE=0.0857
+2353.4s 123 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+2440.7s 124 ↳ Best ML model: Linear  RMSE=0.2890
+2473.7s 125 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+2579.0s 126 ↳ Best ML model: Linear  RMSE=0.3779
+2621.9s 127 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+2781.3s 128 ↳ Best ML model: RF  RMSE=0.2043
+2821.4s 129 Training finished – Q-table states: 909
+2821.8s 130 Back-test: final $11,611.71 | strategy 16.12% | buy-&-hold  5.90% | trades 401
+2821.8s 131 \n--- NVDA | Simulation Run 4/30 ---
+2821.8s 132 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+2821.8s 133 Sliding windows: 7
+2821.8s 134 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+2939.9s 135 ↳ Best ML model: XGB  RMSE=0.0960
+2973.8s 136 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+3066.9s 137 ↳ Best ML model: XGB  RMSE=0.0995
+3109.6s 138 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+3273.4s 139 ↳ Best ML model: RF  RMSE=0.1673
+3312.7s 140 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+3414.8s 141 ↳ Best ML model: XGB  RMSE=0.0857
+3453.2s 142 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+3520.7s 143 ↳ Best ML model: Linear  RMSE=0.2890
+3553.1s 144 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+3639.7s 145 ↳ Best ML model: Linear  RMSE=0.3779
+3679.7s 146 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+3812.9s 147 ↳ Best ML model: RF  RMSE=0.2043
+3853.8s 148 Training finished – Q-table states: 910
+3854.3s 149 Back-test: final $12,721.12 | strategy 27.21% | buy-&-hold  5.90% | trades 366
+3854.3s 150 \n--- NVDA | Simulation Run 5/30 ---
+3854.3s 151 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+3854.3s 152 Sliding windows: 7
+3854.3s 153 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+3929.5s 154 ↳ Best ML model: XGB  RMSE=0.0960
+3962.9s 155 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+4019.4s 156 ↳ Best ML model: XGB  RMSE=0.0995
+4061.2s 157 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+4124.9s 158 ↳ Best ML model: RF  RMSE=0.1673
+4166.3s 159 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+4303.2s 160 ↳ Best ML model: XGB  RMSE=0.0857
+4346.4s 161 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+4425.1s 162 ↳ Best ML model: Linear  RMSE=0.2890
+4456.1s 163 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+4630.7s 164 ↳ Best ML model: Linear  RMSE=0.3779
+4669.9s 165 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+4728.5s 166 ↳ Best ML model: RF  RMSE=0.2043
+4770.2s 167 Training finished – Q-table states: 916
+4770.5s 168 Back-test: final $12,289.49 | strategy 22.89% | buy-&-hold  5.90% | trades 404
+4770.5s 169 \n--- NVDA | Simulation Run 6/30 ---
+4770.5s 170 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+4770.5s 171 Sliding windows: 7
+4770.5s 172 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+4834.9s 173 ↳ Best ML model: XGB  RMSE=0.0960
+4866.4s 174 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+4932.0s 175 ↳ Best ML model: XGB  RMSE=0.0995
+4973.9s 176 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+5154.6s 177 ↳ Best ML model: RF  RMSE=0.1673
+5196.6s 178 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+5265.7s 179 ↳ Best ML model: XGB  RMSE=0.0857
+5307.9s 180 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+5437.5s 181 ↳ Best ML model: Linear  RMSE=0.2890
+5467.2s 182 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+5547.3s 183 ↳ Best ML model: Linear  RMSE=0.3779
+5586.4s 184 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+5708.1s 185 ↳ Best ML model: RF  RMSE=0.2043
+5748.0s 186 Training finished – Q-table states: 915
+5748.4s 187 Back-test: final $10,158.00 | strategy  1.58% | buy-&-hold  5.90% | trades 430
+5748.4s 188 \n--- NVDA | Simulation Run 7/30 ---
+5748.4s 189 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+5748.4s 190 Sliding windows: 7
+5748.4s 191 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+5836.9s 192 ↳ Best ML model: XGB  RMSE=0.0960
+5872.0s 193 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+5932.7s 194 ↳ Best ML model: XGB  RMSE=0.0995
+5973.5s 195 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+6140.3s 196 ↳ Best ML model: RF  RMSE=0.1673
+6179.9s 197 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+6342.1s 198 ↳ Best ML model: XGB  RMSE=0.0857
+6383.0s 199 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+6451.6s 200 ↳ Best ML model: Linear  RMSE=0.2890
+6483.9s 201 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+6628.8s 202 ↳ Best ML model: Linear  RMSE=0.3779
+6666.6s 203 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+6800.3s 204 ↳ Best ML model: RF  RMSE=0.2043
+6841.7s 205 Training finished – Q-table states: 914
+6842.1s 206 Back-test: final $10,440.22 | strategy  4.40% | buy-&-hold  5.90% | trades 543
+6842.1s 207 \n--- NVDA | Simulation Run 8/30 ---
+6842.1s 208 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+6842.1s 209 Sliding windows: 7
+6842.1s 210 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+6948.7s 211 ↳ Best ML model: XGB  RMSE=0.0960
+6980.7s 212 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+7051.2s 213 ↳ Best ML model: XGB  RMSE=0.0995
+7093.9s 214 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+7231.5s 215 ↳ Best ML model: RF  RMSE=0.1673
+7271.7s 216 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+7379.5s 217 ↳ Best ML model: XGB  RMSE=0.0857
+7421.3s 218 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+7486.3s 219 ↳ Best ML model: Linear  RMSE=0.2890
+7517.1s 220 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+7665.8s 221 ↳ Best ML model: Linear  RMSE=0.3779
+7707.1s 222 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+7810.7s 223 ↳ Best ML model: RF  RMSE=0.2043
+7850.7s 224 Training finished – Q-table states: 915
+7851.1s 225 Back-test: final $9,811.25 | strategy -1.89% | buy-&-hold  5.90% | trades 412
+7851.1s 226 \n--- NVDA | Simulation Run 9/30 ---
+7851.1s 227 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+7851.1s 228 Sliding windows: 7
+7851.1s 229 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+7907.4s 230 ↳ Best ML model: XGB  RMSE=0.0960
+7939.9s 231 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+8069.2s 232 ↳ Best ML model: XGB  RMSE=0.0995
+8112.0s 233 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+8208.0s 234 ↳ Best ML model: RF  RMSE=0.1673
+8248.0s 235 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+8345.8s 236 ↳ Best ML model: XGB  RMSE=0.0857
+8391.2s 237 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+8662.2s 238 ↳ Best ML model: Linear  RMSE=0.2890
+8690.2s 239 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+8842.7s 240 ↳ Best ML model: Linear  RMSE=0.3779
+8886.5s 241 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+9088.4s 242 ↳ Best ML model: RF  RMSE=0.2043
+9126.0s 243 Training finished – Q-table states: 910
+9126.4s 244 Back-test: final $11,858.54 | strategy 18.59% | buy-&-hold  5.90% | trades 382
+9126.4s 245 \n--- NVDA | Simulation Run 10/30 ---
+9126.4s 246 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+9126.4s 247 Sliding windows: 7
+9126.4s 248 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+9253.8s 249 ↳ Best ML model: XGB  RMSE=0.0960
+9287.2s 250 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+9373.3s 251 ↳ Best ML model: XGB  RMSE=0.0995
+9413.4s 252 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+9545.0s 253 ↳ Best ML model: RF  RMSE=0.1673
+9585.6s 254 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+9709.8s 255 ↳ Best ML model: XGB  RMSE=0.0857
+9755.1s 256 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+9823.1s 257 ↳ Best ML model: Linear  RMSE=0.2890
+9852.6s 258 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+9938.8s 259 ↳ Best ML model: Linear  RMSE=0.3779
+9979.3s 260 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+10123.6s 261 ↳ Best ML model: RF  RMSE=0.2043
+10167.1s 262 Training finished – Q-table states: 910
+10167.5s 263 Back-test: final $11,862.76 | strategy 18.63% | buy-&-hold  5.90% | trades 441
+10167.5s 264 \n--- NVDA | Simulation Run 11/30 ---
+10167.5s 265 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+10167.5s 266 Sliding windows: 7
+10167.5s 267 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+10271.5s 268 ↳ Best ML model: XGB  RMSE=0.0960
+10302.2s 269 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+10370.7s 270 ↳ Best ML model: XGB  RMSE=0.0995
+10408.3s 271 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+10562.0s 272 ↳ Best ML model: RF  RMSE=0.1673
+10600.4s 273 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+10757.4s 274 ↳ Best ML model: XGB  RMSE=0.0857
+10800.1s 275 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+10914.3s 276 ↳ Best ML model: Linear  RMSE=0.2890
+10946.0s 277 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+11024.0s 278 ↳ Best ML model: Linear  RMSE=0.3779
+11064.9s 279 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+11256.6s 280 ↳ Best ML model: NN  RMSE=0.1872
+11299.2s 281 Training finished – Q-table states: 912
+11300.0s 282 Back-test: final $11,273.03 | strategy 12.73% | buy-&-hold  5.90% | trades 553
+11300.0s 283 \n--- NVDA | Simulation Run 12/30 ---
+11300.0s 284 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+11300.0s 285 Sliding windows: 7
+11300.0s 286 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+11502.7s 287 ↳ Best ML model: XGB  RMSE=0.0960
+11536.5s 288 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+11599.4s 289 ↳ Best ML model: XGB  RMSE=0.0995
+11641.7s 290 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+11706.0s 291 ↳ Best ML model: RF  RMSE=0.1673
+11749.9s 292 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+11830.7s 293 ↳ Best ML model: XGB  RMSE=0.0857
+11874.0s 294 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+11971.2s 295 ↳ Best ML model: Linear  RMSE=0.2890
+12000.8s 296 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+12088.0s 297 ↳ Best ML model: Linear  RMSE=0.3779
+12124.3s 298 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+12262.0s 299 ↳ Best ML model: RF  RMSE=0.2043
+12302.1s 300 Training finished – Q-table states: 913
+12302.5s 301 Back-test: final $11,876.34 | strategy 18.76% | buy-&-hold  5.90% | trades 560
+12302.5s 302 \n--- NVDA | Simulation Run 13/30 ---
+12302.5s 303 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+12302.5s 304 Sliding windows: 7
+12302.5s 305 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+12372.1s 306 ↳ Best ML model: XGB  RMSE=0.0960
+12404.7s 307 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+12581.9s 308 ↳ Best ML model: XGB  RMSE=0.0995
+12628.7s 309 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+12704.3s 310 ↳ Best ML model: RF  RMSE=0.1673
+12745.6s 311 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+12892.3s 312 ↳ Best ML model: XGB  RMSE=0.0857
+12928.8s 313 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+13000.7s 314 ↳ Best ML model: Linear  RMSE=0.2890
+13033.9s 315 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+13138.5s 316 ↳ Best ML model: Linear  RMSE=0.3779
+13176.5s 317 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+13242.2s 318 ↳ Best ML model: RF  RMSE=0.2043
+13282.3s 319 Training finished – Q-table states: 926
+13282.8s 320 Back-test: final $11,259.19 | strategy 12.59% | buy-&-hold  5.90% | trades 350
+13282.8s 321 \n--- NVDA | Simulation Run 14/30 ---
+13282.8s 322 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+13282.8s 323 Sliding windows: 7
+13282.8s 324 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+13385.9s 325 ↳ Best ML model: XGB  RMSE=0.0960
+13420.4s 326 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+13496.2s 327 ↳ Best ML model: XGB  RMSE=0.0995
+13538.6s 328 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+13627.5s 329 ↳ Best ML model: RF  RMSE=0.1673
+13666.5s 330 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+13797.2s 331 ↳ Best ML model: XGB  RMSE=0.0857
+13842.4s 332 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+13943.5s 333 ↳ Best ML model: Linear  RMSE=0.2890
+13974.3s 334 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+14146.8s 335 ↳ Best ML model: Linear  RMSE=0.3779
+14186.0s 336 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+14263.3s 337 ↳ Best ML model: RF  RMSE=0.2043
+14304.3s 338 Training finished – Q-table states: 913
+14304.7s 339 Back-test: final $11,145.02 | strategy 11.45% | buy-&-hold  5.90% | trades 548
+14304.7s 340 \n--- NVDA | Simulation Run 15/30 ---
+14304.7s 341 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+14304.7s 342 Sliding windows: 7
+14304.7s 343 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+14427.3s 344 ↳ Best ML model: XGB  RMSE=0.0960
+14464.5s 345 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+14555.1s 346 ↳ Best ML model: XGB  RMSE=0.0995
+14599.2s 347 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+14800.9s 348 ↳ Best ML model: RF  RMSE=0.1673
+14841.1s 349 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+14971.8s 350 ↳ Best ML model: XGB  RMSE=0.0857
+15017.7s 351 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+15100.4s 352 ↳ Best ML model: Linear  RMSE=0.2890
+15131.5s 353 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+15211.2s 354 ↳ Best ML model: Linear  RMSE=0.3779
+15251.1s 355 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+15312.7s 356 ↳ Best ML model: RF  RMSE=0.2043
+15354.6s 357 Training finished – Q-table states: 919
+15355.0s 358 Back-test: final $10,090.29 | strategy  0.90% | buy-&-hold  5.90% | trades 504
+15355.0s 359 \n--- NVDA | Simulation Run 16/30 ---
+15355.0s 360 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+15355.0s 361 Sliding windows: 7
+15355.0s 362 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+15419.3s 363 ↳ Best ML model: XGB  RMSE=0.0960
+15456.2s 364 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+15550.5s 365 ↳ Best ML model: XGB  RMSE=0.0995
+15589.0s 366 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+15712.7s 367 ↳ Best ML model: RF  RMSE=0.1673
+15752.1s 368 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+15842.2s 369 ↳ Best ML model: XGB  RMSE=0.0857
+15884.9s 370 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+15992.8s 371 ↳ Best ML model: Linear  RMSE=0.2890
+16025.0s 372 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+16106.9s 373 ↳ Best ML model: Linear  RMSE=0.3779
+16149.4s 374 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+16228.5s 375 ↳ Best ML model: RF  RMSE=0.2043
+16270.5s 376 Training finished – Q-table states: 916
+16270.9s 377 Back-test: final $10,411.31 | strategy  4.11% | buy-&-hold  5.90% | trades 341
+16270.9s 378 \n--- NVDA | Simulation Run 17/30 ---
+16270.9s 379 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+16270.9s 380 Sliding windows: 7
+16270.9s 381 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+16329.6s 382 ↳ Best ML model: XGB  RMSE=0.0960
+16361.0s 383 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+16470.9s 384 ↳ Best ML model: XGB  RMSE=0.0995
+16514.3s 385 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+16631.6s 386 ↳ Best ML model: RF  RMSE=0.1673
+16672.9s 387 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+16798.4s 388 ↳ Best ML model: XGB  RMSE=0.0857
+16840.2s 389 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+16937.7s 390 ↳ Best ML model: Linear  RMSE=0.2890
+16970.1s 391 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+17070.7s 392 ↳ Best ML model: Linear  RMSE=0.3779
+17109.0s 393 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+17183.3s 394 ↳ Best ML model: RF  RMSE=0.2043
+17224.4s 395 Training finished – Q-table states: 912
+17224.7s 396 Back-test: final $11,331.31 | strategy 13.31% | buy-&-hold  5.90% | trades 356
+17224.7s 397 \n--- NVDA | Simulation Run 18/30 ---
+17224.7s 398 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+17224.7s 399 Sliding windows: 7
+17224.7s 400 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+17300.7s 401 ↳ Best ML model: XGB  RMSE=0.0960
+17334.9s 402 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+17424.2s 403 ↳ Best ML model: XGB  RMSE=0.0995
+17468.2s 404 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+17596.2s 405 ↳ Best ML model: RF  RMSE=0.1673
+17636.0s 406 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+17776.2s 407 ↳ Best ML model: XGB  RMSE=0.0857
+17824.9s 408 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+17902.7s 409 ↳ Best ML model: Linear  RMSE=0.2890
+17935.1s 410 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+18080.8s 411 ↳ Best ML model: Linear  RMSE=0.3779
+18121.3s 412 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+18244.1s 413 ↳ Best ML model: NN  RMSE=0.1967
+18287.3s 414 Training finished – Q-table states: 912
+18288.1s 415 Back-test: final $11,080.23 | strategy 10.80% | buy-&-hold  5.90% | trades 1220
+18288.1s 416 \n--- NVDA | Simulation Run 19/30 ---
+18288.1s 417 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+18288.1s 418 Sliding windows: 7
+18288.1s 419 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+18436.5s 420 ↳ Best ML model: XGB  RMSE=0.0960
+18470.2s 421 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+18572.4s 422 ↳ Best ML model: XGB  RMSE=0.0995
+18615.9s 423 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+18782.0s 424 ↳ Best ML model: RF  RMSE=0.1673
+18823.3s 425 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+19002.6s 426 ↳ Best ML model: XGB  RMSE=0.0857
+19045.9s 427 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+19147.5s 428 ↳ Best ML model: Linear  RMSE=0.2890
+19178.6s 429 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+19459.5s 430 ↳ Best ML model: NN  RMSE=0.3371
+19508.9s 431 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+19661.7s 432 ↳ Best ML model: RF  RMSE=0.2043
+19701.5s 433 Training finished – Q-table states: 875
+19701.9s 434 Back-test: final $12,088.36 | strategy 20.88% | buy-&-hold  5.90% | trades 464
+19701.9s 435 \n--- NVDA | Simulation Run 20/30 ---
+19701.9s 436 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+19701.9s 437 Sliding windows: 7
+19701.9s 438 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+19766.2s 439 ↳ Best ML model: XGB  RMSE=0.0960
+19798.7s 440 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+19877.7s 441 ↳ Best ML model: XGB  RMSE=0.0995
+19921.2s 442 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+20022.7s 443 ↳ Best ML model: RF  RMSE=0.1673
+20068.0s 444 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+20183.1s 445 ↳ Best ML model: XGB  RMSE=0.0857
+20225.4s 446 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+20320.7s 447 ↳ Best ML model: Linear  RMSE=0.2890
+20355.0s 448 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+20440.2s 449 ↳ Best ML model: Linear  RMSE=0.3779
+20480.4s 450 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+20569.0s 451 ↳ Best ML model: RF  RMSE=0.2043
+20609.8s 452 Training finished – Q-table states: 909
+20610.2s 453 Back-test: final $12,290.29 | strategy 22.90% | buy-&-hold  5.90% | trades 392
+20610.2s 454 \n--- NVDA | Simulation Run 21/30 ---
+20610.2s 455 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+20610.2s 456 Sliding windows: 7
+20610.2s 457 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+20671.6s 458 ↳ Best ML model: XGB  RMSE=0.0960
+20705.4s 459 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+20794.3s 460 ↳ Best ML model: XGB  RMSE=0.0995
+20834.3s 461 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+20905.6s 462 ↳ Best ML model: RF  RMSE=0.1673
+20944.0s 463 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+21113.8s 464 ↳ Best ML model: XGB  RMSE=0.0857
+21154.0s 465 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+21218.9s 466 ↳ Best ML model: Linear  RMSE=0.2890
+21252.4s 467 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+21338.4s 468 ↳ Best ML model: Linear  RMSE=0.3779
+21381.1s 469 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+21458.6s 470 ↳ Best ML model: RF  RMSE=0.2043
+21499.5s 471 Training finished – Q-table states: 914
+21499.8s 472 Back-test: final $10,239.09 | strategy  2.39% | buy-&-hold  5.90% | trades 367
+21499.8s 473 \n--- NVDA | Simulation Run 22/30 ---
+21499.8s 474 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+21500.0s 475 Sliding windows: 7
+21500.0s 476 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+21667.0s 477 ↳ Best ML model: XGB  RMSE=0.0960
+21697.6s 478 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+21798.0s 479 ↳ Best ML model: XGB  RMSE=0.0995
+21840.7s 480 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+21913.2s 481 ↳ Best ML model: RF  RMSE=0.1673
+21958.0s 482 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+22039.2s 483 ↳ Best ML model: XGB  RMSE=0.0857
+22080.3s 484 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+22152.4s 485 ↳ Best ML model: Linear  RMSE=0.2890
+22184.9s 486 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+22300.1s 487 ↳ Best ML model: Linear  RMSE=0.3779
+22343.1s 488 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+22436.4s 489 ↳ Best ML model: RF  RMSE=0.2043
+22476.5s 490 Training finished – Q-table states: 914
+22477.0s 491 Back-test: final $10,345.14 | strategy  3.45% | buy-&-hold  5.90% | trades 366
+22477.0s 492 \n--- NVDA | Simulation Run 23/30 ---
+22477.0s 493 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+22477.0s 494 Sliding windows: 7
+22477.0s 495 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+22578.2s 496 ↳ Best ML model: XGB  RMSE=0.0960
+22618.8s 497 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+22682.5s 498 ↳ Best ML model: XGB  RMSE=0.0995
+22724.2s 499 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+22820.4s 500 ↳ Best ML model: RF  RMSE=0.1673
+22861.1s 501 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+22928.3s 502 ↳ Best ML model: XGB  RMSE=0.0857
+22971.3s 503 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+23049.9s 504 ↳ Best ML model: Linear  RMSE=0.2890
+23082.1s 505 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+23150.7s 506 ↳ Best ML model: Linear  RMSE=0.3779
+23196.2s 507 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+23431.3s 508 ↳ Best ML model: RF  RMSE=0.2043
+23471.8s 509 Training finished – Q-table states: 909
+23472.2s 510 Back-test: final $9,358.67 | strategy -6.41% | buy-&-hold  5.90% | trades 536
+23472.2s 511 \n--- NVDA | Simulation Run 24/30 ---
+23472.2s 512 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+23472.2s 513 Sliding windows: 7
+23472.2s 514 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+23543.1s 515 ↳ Best ML model: XGB  RMSE=0.0960
+23575.1s 516 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+23750.1s 517 ↳ Best ML model: XGB  RMSE=0.0995
+23793.0s 518 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+23870.7s 519 ↳ Best ML model: RF  RMSE=0.1673
+23909.2s 520 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+23971.3s 521 ↳ Best ML model: XGB  RMSE=0.0857
+24013.0s 522 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+24196.5s 523 ↳ Best ML model: Linear  RMSE=0.2890
+24228.4s 524 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+24336.0s 525 ↳ Best ML model: Linear  RMSE=0.3779
+24377.4s 526 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+24491.3s 527 ↳ Best ML model: RF  RMSE=0.2043
+24530.6s 528 Training finished – Q-table states: 919
+24531.1s 529 Back-test: final $12,403.26 | strategy 24.03% | buy-&-hold  5.90% | trades 455
+24531.1s 530 \n--- NVDA | Simulation Run 25/30 ---
+24531.1s 531 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+24531.1s 532 Sliding windows: 7
+24531.1s 533 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+24651.6s 534 ↳ Best ML model: XGB  RMSE=0.0960
+24683.0s 535 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+24764.7s 536 ↳ Best ML model: XGB  RMSE=0.0995
+24812.4s 537 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+24900.7s 538 ↳ Best ML model: RF  RMSE=0.1673
+24942.2s 539 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+25101.2s 540 ↳ Best ML model: XGB  RMSE=0.0857
+25145.4s 541 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+25304.1s 542 ↳ Best ML model: Linear  RMSE=0.2890
+25337.1s 543 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+25555.5s 544 ↳ Best ML model: NN  RMSE=0.3274
+25599.0s 545 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+25670.7s 546 ↳ Best ML model: RF  RMSE=0.2043
+25717.2s 547 Training finished – Q-table states: 966
+25717.5s 548 Back-test: final $11,355.02 | strategy 13.55% | buy-&-hold  5.90% | trades 329
+25717.5s 549 \n--- NVDA | Simulation Run 26/30 ---
+25717.5s 550 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+25717.5s 551 Sliding windows: 7
+25717.5s 552 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+25833.8s 553 ↳ Best ML model: XGB  RMSE=0.0960
+25866.4s 554 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+25942.9s 555 ↳ Best ML model: XGB  RMSE=0.0995
+25983.9s 556 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+26059.1s 557 ↳ Best ML model: RF  RMSE=0.1673
+26098.2s 558 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+26233.1s 559 ↳ Best ML model: XGB  RMSE=0.0857
+26274.8s 560 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+26341.5s 561 ↳ Best ML model: Linear  RMSE=0.2890
+26373.3s 562 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+26514.6s 563 ↳ Best ML model: Linear  RMSE=0.3779
+26559.2s 564 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+26671.9s 565 ↳ Best ML model: RF  RMSE=0.2043
+26712.3s 566 Training finished – Q-table states: 921
+26712.8s 567 Back-test: final $14,786.06 | strategy 47.86% | buy-&-hold  5.90% | trades 350
+26712.8s 568 \n--- NVDA | Simulation Run 27/30 ---
+26712.8s 569 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+26712.8s 570 Sliding windows: 7
+26712.8s 571 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+26822.6s 572 ↳ Best ML model: XGB  RMSE=0.0960
+26857.4s 573 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+26917.7s 574 ↳ Best ML model: XGB  RMSE=0.0995
+26960.0s 575 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+27101.9s 576 ↳ Best ML model: RF  RMSE=0.1673
+27141.3s 577 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+27226.4s 578 ↳ Best ML model: XGB  RMSE=0.0857
+27267.1s 579 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+27382.8s 580 ↳ Best ML model: Linear  RMSE=0.2890
+27421.8s 581 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+27516.2s 582 ↳ Best ML model: Linear  RMSE=0.3779
+27557.9s 583 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+27662.5s 584 ↳ Best ML model: RF  RMSE=0.2043
+27702.7s 585 Training finished – Q-table states: 909
+27703.0s 586 Back-test: final $9,733.75 | strategy -2.66% | buy-&-hold  5.90% | trades 568
+27703.0s 587 \n--- NVDA | Simulation Run 28/30 ---
+27703.0s 588 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+27703.0s 589 Sliding windows: 7
+27703.0s 590 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+27808.5s 591 ↳ Best ML model: XGB  RMSE=0.0960
+27841.8s 592 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+27906.8s 593 ↳ Best ML model: XGB  RMSE=0.0995
+27948.6s 594 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+28048.9s 595 ↳ Best ML model: RF  RMSE=0.1673
+28088.9s 596 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+28203.1s 597 ↳ Best ML model: XGB  RMSE=0.0857
+28252.6s 598 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+28406.1s 599 ↳ Best ML model: Linear  RMSE=0.2890
+28435.9s 600 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+28563.0s 601 ↳ Best ML model: Linear  RMSE=0.3779
+28602.9s 602 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+28669.8s 603 ↳ Best ML model: RF  RMSE=0.2043
+28709.2s 604 Training finished – Q-table states: 916
+28709.6s 605 Back-test: final $10,367.43 | strategy  3.67% | buy-&-hold  5.90% | trades 318
+28709.6s 606 \n--- NVDA | Simulation Run 29/30 ---
+28709.6s 607 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+28709.6s 608 Sliding windows: 7
+28709.6s 609 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+28821.6s 610 ↳ Best ML model: XGB  RMSE=0.0960
+28847.7s 611 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+28944.9s 612 ↳ Best ML model: XGB  RMSE=0.0995
+28988.2s 613 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+29115.1s 614 ↳ Best ML model: RF  RMSE=0.1673
+29152.6s 615 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+29271.2s 616 ↳ Best ML model: XGB  RMSE=0.0857
+29314.5s 617 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+29470.5s 618 ↳ Best ML model: Linear  RMSE=0.2890
+29501.8s 619 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+29585.1s 620 ↳ Best ML model: Linear  RMSE=0.3779
+29625.6s 621 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+29953.4s 622 ↳ Best ML model: RF  RMSE=0.2043
+29992.7s 623 Training finished – Q-table states: 910
+29993.2s 624 Back-test: final $12,280.44 | strategy 22.80% | buy-&-hold  5.90% | trades 332
+29993.2s 625 \n--- NVDA | Simulation Run 30/30 ---
+29993.2s 626 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+29993.2s 627 Sliding windows: 7
+29993.2s 628 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+30073.6s 629 ↳ Best ML model: XGB  RMSE=0.0960
+30107.1s 630 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+30215.6s 631 ↳ Best ML model: XGB  RMSE=0.0995
+30257.6s 632 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+30383.5s 633 ↳ Best ML model: RF  RMSE=0.1673
+30425.8s 634 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+30508.6s 635 ↳ Best ML model: XGB  RMSE=0.0857
+30550.0s 636 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+30675.0s 637 ↳ Best ML model: Linear  RMSE=0.2890
+30703.4s 638 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+30780.9s 639 ↳ Best ML model: Linear  RMSE=0.3779
+30821.5s 640 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+31018.1s 641 ↳ Best ML model: RF  RMSE=0.2043
+31059.7s 642 Training finished – Q-table states: 919
+31060.1s 643 Back-test: final $17,900.04 | strategy 79.00% | buy-&-hold  5.90% | trades 454
+31060.1s 644 \n──────────────────── Monte Carlo Analysis for NVDA ────────────────────
+31060.1s 645 ### Performance Statistics for NVDA (Strategy Return %) ###
+31060.1s 646 count    30.0000
+31060.1s 647 mean     14.6070
+31060.1s 648 std      16.5810
+31060.1s 649 min      -6.4133
+31060.1s 650 25%       3.5071
+31060.1s 651 50%      12.6835
+31060.1s 652 75%      20.3536
+31060.1s 653 max      79.0004
+31060.1s 654 ticker      NVDA
+31060.1s 655 Name: strategy_return_pct, dtype: object
+31060.6s 656 Results distribution plot saved as monte_carlo_results_NVDA.png
+31060.6s 657 \n\n========================= Starting Monte Carlo Simulation for TSLA =========================
+31060.6s 658 Running 30 simulations...
+31060.6s 659 \n--- TSLA | Simulation Run 1/30 ---
+31060.6s 660 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+31060.6s 661 Sliding windows: 7
+31060.6s 662 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+31155.9s 663 ↳ Best ML model: XGB  RMSE=0.1029
+31189.5s 664 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+31289.9s 665 ↳ Best ML model: XGB  RMSE=0.0765
+31330.7s 666 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+31424.9s 667 ↳ Best ML model: RF  RMSE=0.1801
+31466.3s 668 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+31543.7s 669 ↳ Best ML model: XGB  RMSE=0.0813
+31585.9s 670 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+31667.2s 671 ↳ Best ML model: XGB  RMSE=0.0963
+31700.0s 672 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+31772.9s 673 ↳ Best ML model: Linear  RMSE=0.1188
+31812.6s 674 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+31956.0s 675 ↳ Best ML model: RF  RMSE=0.8869
+31995.4s 676 Training finished – Q-table states: 712
+31995.9s 677 Back-test: final $17,465.62 | strategy 74.66% | buy-&-hold -1.85% | trades 671
+31995.9s 678 \n--- TSLA | Simulation Run 2/30 ---
+31995.9s 679 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+31995.9s 680 Sliding windows: 7
+31995.9s 681 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+32071.4s 682 ↳ Best ML model: XGB  RMSE=0.1029
+32106.5s 683 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+32192.2s 684 ↳ Best ML model: XGB  RMSE=0.0765
+32234.8s 685 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+32319.6s 686 ↳ Best ML model: RF  RMSE=0.1801
+32361.3s 687 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+32430.9s 688 ↳ Best ML model: XGB  RMSE=0.0813
+32474.1s 689 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+32570.7s 690 ↳ Best ML model: XGB  RMSE=0.0963
+32602.7s 691 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+32682.7s 692 ↳ Best ML model: Linear  RMSE=0.1188
+32722.2s 693 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+32851.4s 694 ↳ Best ML model: RF  RMSE=0.8869
+32891.7s 695 Training finished – Q-table states: 704
+32892.1s 696 Back-test: final $17,060.08 | strategy 70.60% | buy-&-hold -1.85% | trades 355
+32892.1s 697 \n--- TSLA | Simulation Run 3/30 ---
+32892.1s 698 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+32892.1s 699 Sliding windows: 7
+32892.1s 700 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+32990.9s 701 ↳ Best ML model: XGB  RMSE=0.1029
+33023.6s 702 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+33141.9s 703 ↳ Best ML model: XGB  RMSE=0.0765
+33183.5s 704 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+33311.3s 705 ↳ Best ML model: RF  RMSE=0.1801
+33356.6s 706 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+33434.4s 707 ↳ Best ML model: XGB  RMSE=0.0813
+33472.5s 708 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+33628.5s 709 ↳ Best ML model: XGB  RMSE=0.0963
+33658.3s 710 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+33736.8s 711 ↳ Best ML model: Linear  RMSE=0.1188
+33773.6s 712 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+33848.2s 713 ↳ Best ML model: RF  RMSE=0.8869
+33888.7s 714 Training finished – Q-table states: 707
+33889.1s 715 Back-test: final $10,133.21 | strategy  1.33% | buy-&-hold -1.85% | trades 519
+33889.1s 716 \n--- TSLA | Simulation Run 4/30 ---
+33889.1s 717 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+33889.1s 718 Sliding windows: 7
+33889.1s 719 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+33994.4s 720 ↳ Best ML model: XGB  RMSE=0.1029
+34028.0s 721 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+34201.0s 722 ↳ Best ML model: XGB  RMSE=0.0765
+34242.8s 723 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+34337.7s 724 ↳ Best ML model: RF  RMSE=0.1801
+34377.9s 725 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+34539.7s 726 ↳ Best ML model: XGB  RMSE=0.0813
+34579.5s 727 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+34730.4s 728 ↳ Best ML model: XGB  RMSE=0.0963
+34759.0s 729 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+34875.8s 730 ↳ Best ML model: Linear  RMSE=0.1188
+34913.9s 731 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+35063.0s 732 ↳ Best ML model: RF  RMSE=0.8869
+35104.6s 733 Training finished – Q-table states: 703
+35104.9s 734 Back-test: final $16,309.50 | strategy 63.09% | buy-&-hold -1.85% | trades 583
+35104.9s 735 \n--- TSLA | Simulation Run 5/30 ---
+35104.9s 736 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+35104.9s 737 Sliding windows: 7
+35104.9s 738 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+35160.7s 739 ↳ Best ML model: XGB  RMSE=0.1029
+35194.8s 740 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+35303.8s 741 ↳ Best ML model: XGB  RMSE=0.0765
+35346.5s 742 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+35435.1s 743 ↳ Best ML model: RF  RMSE=0.1801
+35475.1s 744 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+35555.6s 745 ↳ Best ML model: XGB  RMSE=0.0813
+35596.4s 746 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+35679.1s 747 ↳ Best ML model: XGB  RMSE=0.0963
+35720.9s 748 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+35862.5s 749 ↳ Best ML model: Linear  RMSE=0.1188
+35902.7s 750 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+36123.1s 751 ↳ Best ML model: RF  RMSE=0.8869
+36164.0s 752 Training finished – Q-table states: 710
+36164.4s 753 Back-test: final $18,448.24 | strategy 84.48% | buy-&-hold -1.85% | trades 405
+36164.4s 754 \n--- TSLA | Simulation Run 6/30 ---
+36164.4s 755 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+36164.4s 756 Sliding windows: 7
+36164.4s 757 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+36234.8s 758 ↳ Best ML model: XGB  RMSE=0.1029
+36269.2s 759 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+36338.6s 760 ↳ Best ML model: XGB  RMSE=0.0765
+36381.5s 761 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+36443.0s 762 ↳ Best ML model: RF  RMSE=0.1801
+36483.3s 763 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+36545.6s 764 ↳ Best ML model: XGB  RMSE=0.0813
+36588.1s 765 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+36692.1s 766 ↳ Best ML model: XGB  RMSE=0.0963
+36722.2s 767 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+36819.2s 768 ↳ Best ML model: Linear  RMSE=0.1188
+36870.0s 769 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+37086.8s 770 ↳ Best ML model: RF  RMSE=0.8869
+37126.5s 771 Training finished – Q-table states: 707
+37126.9s 772 Back-test: final $10,242.91 | strategy  2.43% | buy-&-hold -1.85% | trades 414
+37126.9s 773 \n--- TSLA | Simulation Run 7/30 ---
+37126.9s 774 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+37126.9s 775 Sliding windows: 7
+37126.9s 776 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+37216.7s 777 ↳ Best ML model: XGB  RMSE=0.1029
+37246.4s 778 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+37309.5s 779 ↳ Best ML model: XGB  RMSE=0.0765
+37350.8s 780 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+37430.7s 781 ↳ Best ML model: RF  RMSE=0.1801
+37471.8s 782 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+37552.8s 783 ↳ Best ML model: XGB  RMSE=0.0813
+37594.8s 784 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+37698.2s 785 ↳ Best ML model: XGB  RMSE=0.0963
+37732.0s 786 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+37807.3s 787 ↳ Best ML model: Linear  RMSE=0.1188
+37847.3s 788 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+37980.8s 789 ↳ Best ML model: RF  RMSE=0.8869
+38028.9s 790 Training finished – Q-table states: 712
+38028.9s 791 Back-test: final $9,667.45 | strategy -3.33% | buy-&-hold -1.85% | trades 505
+38028.9s 792 \n--- TSLA | Simulation Run 8/30 ---
+38029.2s 793 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+38029.2s 794 Sliding windows: 7
+38029.2s 795 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+38089.6s 796 ↳ Best ML model: XGB  RMSE=0.1029
+38116.9s 797 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+38198.7s 798 ↳ Best ML model: XGB  RMSE=0.0765
+38240.8s 799 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+38323.6s 800 ↳ Best ML model: RF  RMSE=0.1801
+38363.8s 801 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+38455.2s 802 ↳ Best ML model: XGB  RMSE=0.0813
+38498.6s 803 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+38570.8s 804 ↳ Best ML model: XGB  RMSE=0.0963
+38604.6s 805 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+38690.3s 806 ↳ Best ML model: Linear  RMSE=0.1188
+38730.7s 807 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+38942.9s 808 ↳ Best ML model: RF  RMSE=0.8869
+38983.7s 809 Training finished – Q-table states: 713
+38984.3s 810 Back-test: final $10,069.79 | strategy  0.70% | buy-&-hold -1.85% | trades 463
+38984.3s 811 \n--- TSLA | Simulation Run 9/30 ---
+38984.3s 812 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+38984.6s 813 Sliding windows: 7
+38984.6s 814 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+39055.9s 815 ↳ Best ML model: XGB  RMSE=0.1029
+39088.2s 816 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+39273.3s 817 ↳ Best ML model: XGB  RMSE=0.0765
+39316.8s 818 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+39403.7s 819 ↳ Best ML model: RF  RMSE=0.1801
+39444.7s 820 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+39537.3s 821 ↳ Best ML model: XGB  RMSE=0.0813
+39579.2s 822 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+39663.3s 823 ↳ Best ML model: XGB  RMSE=0.0963
+39694.2s 824 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+39788.8s 825 ↳ Best ML model: Linear  RMSE=0.1188
+39828.8s 826 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+40005.4s 827 ↳ Best ML model: LSTM  RMSE=0.8864
+40006.1s 828 /usr/local/lib/python3.11/dist-packages/sklearn/base.py:439: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+40006.1s 829 warnings.warn(
+40047.7s 830 Training finished – Q-table states: 708
+40048.3s 831 /usr/local/lib/python3.11/dist-packages/sklearn/base.py:439: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+40048.3s 832 warnings.warn(
+40049.6s 833 Back-test: final $15,323.96 | strategy 53.24% | buy-&-hold -1.85% | trades 559
+40049.6s 834 \n--- TSLA | Simulation Run 10/30 ---
+40049.6s 835 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+40049.6s 836 Sliding windows: 7
+40049.6s 837 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+40158.0s 838 ↳ Best ML model: XGB  RMSE=0.1029
+40189.9s 839 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+40353.5s 840 ↳ Best ML model: XGB  RMSE=0.0765
+40395.4s 841 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+40466.3s 842 ↳ Best ML model: RF  RMSE=0.1801
+40516.9s 843 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+40620.8s 844 ↳ Best ML model: XGB  RMSE=0.0813
+40663.9s 845 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+40735.0s 846 ↳ Best ML model: XGB  RMSE=0.0963
+40766.8s 847 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+40834.7s 848 ↳ Best ML model: Linear  RMSE=0.1188
+40876.5s 849 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+41025.2s 850 ↳ Best ML model: RF  RMSE=0.8869
+41067.4s 851 Training finished – Q-table states: 706
+41067.8s 852 Back-test: final $9,671.16 | strategy -3.29% | buy-&-hold -1.85% | trades 359
+41067.8s 853 \n--- TSLA | Simulation Run 11/30 ---
+41067.8s 854 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+41067.8s 855 Sliding windows: 7
+41067.8s 856 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+41149.3s 857 ↳ Best ML model: XGB  RMSE=0.1029
+41180.9s 858 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+41275.4s 859 ↳ Best ML model: XGB  RMSE=0.0765
+41317.5s 860 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+41377.5s 861 ↳ Best ML model: RF  RMSE=0.1801
+41418.5s 862 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+41579.2s 863 ↳ Best ML model: XGB  RMSE=0.0813
+41621.6s 864 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+41717.4s 865 ↳ Best ML model: XGB  RMSE=0.0963
+41751.6s 866 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+41845.2s 867 ↳ Best ML model: Linear  RMSE=0.1188
+41885.9s 868 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+42047.8s 869 ↳ Best ML model: RF  RMSE=0.8869
+42088.9s 870 Training finished – Q-table states: 705
+42089.2s 871 Back-test: final $9,786.73 | strategy -2.13% | buy-&-hold -1.85% | trades 258
+42089.2s 872 \n--- TSLA | Simulation Run 12/30 ---
+42089.2s 873 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+42089.2s 874 Sliding windows: 7
+42089.2s 875 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+42168.8s 876 ↳ Best ML model: XGB  RMSE=0.1029
+42203.6s 877 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01
+42267.9s 878 ↳ Best ML model: XGB  RMSE=0.0765
+42309.6s 879 ▸ Window 3/7  ML 2025-01-02→2025-02-01  RL 2025-02-01→2025-02-08
+42440.2s 880 ↳ Best ML model: RF  RMSE=0.1801
+42479.5s 881 ▸ Window 4/7  ML 2025-01-09→2025-02-08  RL 2025-02-08→2025-02-15
+42592.9s 882 ↳ Best ML model: XGB  RMSE=0.0813
+42635.4s 883 ▸ Window 5/7  ML 2025-01-16→2025-02-15  RL 2025-02-15→2025-02-22
+42710.7s 884 ↳ Best ML model: XGB  RMSE=0.0963
+42742.9s 885 ▸ Window 6/7  ML 2025-01-23→2025-02-22  RL 2025-02-22→2025-03-01
+42834.4s 886 ↳ Best ML model: Linear  RMSE=0.1188
+42875.8s 887 ▸ Window 7/7  ML 2025-01-30→2025-03-01  RL 2025-03-01→2025-03-08
+43003.6s 888 ↳ Best ML model: RF  RMSE=0.8869
+43043.2s 889 Training finished – Q-table states: 704
+43043.5s 890 Back-test: final $18,327.77 | strategy 83.28% | buy-&-hold -1.85% | trades 645
+43043.5s 891 \n--- TSLA | Simulation Run 13/30 ---
+43043.5s 892 ### Section 3: Sentiment model trained (tf-idf + logistic) ###
+43043.5s 893 Sliding windows: 7
+43043.5s 894 ▸ Window 1/7  ML 2024-12-19→2025-01-18  RL 2025-01-18→2025-01-25
+43132.5s 895 ↳ Best ML model: XGB  RMSE=0.1029
+43163.3s 896 ▸ Window 2/7  ML 2024-12-26→2025-01-25  RL 2025-01-25→2025-02-01

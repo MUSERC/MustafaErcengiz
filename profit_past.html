@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profit Prediction with Monte Carlo Simulation - Project Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+    }
+    nav a:hover { text-decoration: underline; }
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 { font-size: 2em; margin-bottom: 20px; text-align: center; }
+    h3 { font-size: 1.5em; margin: 30px 0 15px 0; }
+    p { font-size: 1.2em; margin-bottom: 20px; text-align: justify; }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      color: #fff;
+      background-color: #007acc;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background-color: #005f99;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .result-img {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    .pdf-container {
+      width: 100%;
+      height: 800px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .notebook-container {
+      width: 100%;
+      height: 800px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .notebook-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .logs-container {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 20px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      line-height: 1.6;
+      max-height: 600px;
+      overflow-y: auto;
+      margin: 20px 0;
+    }
+    .logs-container::-webkit-scrollbar {
+      width: 10px;
+    }
+    .logs-container::-webkit-scrollbar-track {
+      background: #2d2d2d;
+      border-radius: 5px;
+    }
+    .logs-container::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 5px;
+    }
+    .logs-container::-webkit-scrollbar-thumb:hover {
+      background: #777;
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { font-size: 1em; }
+      main { margin: 20px auto; padding: 0 10px; }
+      p { font-size: 1em; }
+      .pdf-container, .notebook-container {
+        height: 600px;
+      }
+      .logs-container {
+        font-size: 0.8em;
+        max-height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Profit Prediction with Monte Carlo Simulation</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Project Details</h2>
+    <p>
+      We developed a hybrid trading system that combines predictive machine learning with a reinforcement learning agent capable of reacting to real-time news sentiment. By utilizing a sliding-window approach to constantly adapt to market changes, our model significantly outperformed standard buy-and-hold strategies in tests across major tech stocks mainly NVIDIA.
+    </p>
+
+    <h3>Project Overview</h3>
+    <p><strong>Objective</strong></p>
+    <p>
+      The goal of this project was to build an automated trading agent that adapts to changing market conditions by combining predictive Machine Learning (ML) with Reinforcement Learning (RL) and real-time news sentiment analysis.
+    </p>
+    <p><strong>Core Methodology</strong></p>
+    <p>
+      <strong>Hybrid Architecture:</strong> The system uses a "one-step-ahead" return forecaster (trained using models like LSTM, XGBoost, or Random Forest) to predict short-term price movements. An RL agent (Q-Learning) then uses these predictions, along with current market data and sentiment scores, to make Buy, Sell, or Hold decisions.
+    </p>
+    <p>
+      <strong>Sliding Window Mechanism:</strong> To prevent the model from becoming obsolete, it employs a dynamic sliding window. The stock prediction model is retrained on the last 30 days of data, while the RL agent updates weekly, ensuring the strategy remains responsive to recent market shifts.
+    </p>
+    <p>
+      <strong>Sentiment Integration:</strong> The model processes news headlines to generate sentiment scores (Positive/Negative/Neutral), which are fed directly into the RL agent's state space to influence trading decisions.
+    </p>
+    
+    <h3>Monte Carlo Simulation Results</h3>
+    <p>
+      The following visualization shows the results of the Monte Carlo simulation analysis for NVDA (NVIDIA) stock:
+    </p>
+    <div class="section">
+      <img class="result-img" src="monte_carlo_results_NVDA.png" alt="Monte Carlo Simulation Results for NVDA">
+    </div>
+
+    <br><br>
+    <h3>Full Research Paper</h3>
+    <p>
+      View the complete research paper below. You can also download it directly.
+    </p>
+    <a href="Profit_Past_Paper.pdf" download class="button">Download PDF</a>
+    <a href="https://github.com/MUSERC/Profit_In_The_Past/raw/main/Profit_In_The_Pastpdf.pdf" target="_blank" class="button">View on GitHub</a>
+    <div class="pdf-container">
+      <iframe src="Profit_Past_Paper.pdf#toolbar=0" 
+              type="application/pdf" 
+              width="100%" 
+              height="100%">
+        <p style="text-align: center; padding: 20px;">
+          Your browser does not support PDFs. <a href="Profit_Past_Paper.pdf" target="_blank" style="color: #007acc; text-decoration: underline;">Click here to download or view the PDF</a>.
+        </p>
+      </iframe>
+    </div>
+    <p style="text-align: center; color: #666; font-size: 0.9em;">
+      If the PDF doesn't load above, click the download button to view it. You can also <a href="https://github.com/MUSERC/Profit_In_The_Past/raw/main/Profit_In_The_Pastpdf.pdf" target="_blank" style="color: #007acc;">view it directly on GitHub</a>.
+    </p>
+
+    <h3>Jupyter Notebook - Complete Code</h3>
+    <p>
+      Explore the full implementation code in the Jupyter notebook below. This includes all the machine learning models, reinforcement learning agents, and Monte Carlo simulation code.
+    </p>
+    <a href="https://github.com/MUSERC/Profit_In_The_Past/blob/main/paper_code.ipynb" target="_blank" class="button">🔗 View on GitHub</a>
+    <div class="notebook-container">
+      <iframe src="https://nbviewer.org/github/MUSERC/Profit_In_The_Past/blob/main/paper_code.ipynb"
+              width="100%" height="100%">
+        <p>Your browser does not support iframes. <a href="https://nbviewer.org/github/MUSERC/Profit_In_The_Past/blob/main/paper_code.ipynb" target="_blank">View the notebook</a> instead.</p>
+      </iframe>
+    </div>
+
+   
+
+    <!-- Back to Projects -->
+    <a class="back-link" href="projects.html">&larr; Back to Projects</a>
+  </main>
+
+</body>
+</html>
+
